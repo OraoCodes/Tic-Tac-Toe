@@ -34,3 +34,15 @@ function selectGameField(event) {
   console.log(gameData);
   switchPlayer();
 }
+
+function checkForGameOver(){
+    for (let i; 1 < 3; i++){
+        if (
+            gameData[i][0] > 0 &&
+            gameData[i][0] === gameData[i][1] && 
+            gameData[i][1] === gameData[i][2]
+        ){
+        return gameData[i][0];
+        }
+    }
+}
