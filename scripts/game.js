@@ -4,7 +4,6 @@ function resetGameStatus(){
   gameIsOver = false;
   gameOverElement.firstElementChild.innerHTML = '<span id="winner-name">PLAYER NAME</span> Wins!';
   gameOverElement.style.display = 'none';
-
   let gameBoardIndex = 0;
 
   for (let i; i < 3; i++){
@@ -64,7 +63,7 @@ function selectGameField(event) {
 }
 
 function checkForGameOver() {
-  for (let i; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     if (
       gameData[i][0] > 0 &&
       gameData[i][0] === gameData[i][1] &&
@@ -73,7 +72,7 @@ function checkForGameOver() {
       return gameData[i][0];
     }
   }
-  for (let i; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     if (
       gameData[0][i] > 0 &&
       gameData[0][i] === gameData[1][i] &&
@@ -82,7 +81,6 @@ function checkForGameOver() {
       return gameData[0][i];
     }
   }
-  //diagonal checks
   if (
     gameData[0][0] > 0 &&
     gameData[0][0] === gameData[1][1] &&
