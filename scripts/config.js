@@ -25,13 +25,6 @@ function savePlayerConfig(event){
     }
 const updatedPlayerDataElement = document.getElementById('player-' + editedPlayer + '-data');
 updatedPlayerDataElement.children[1].textContent = enteredPlayername;
-
-// if(editedPlayer === 1){
-//     players[0].name = enteredPlayername;
-// }else{
-//     players[1].name = enteredPlayername;
-// }
-/*OR*/
 players[editedPlayer - 1].name = enteredPlayername
 
 closePlayerConfig();
